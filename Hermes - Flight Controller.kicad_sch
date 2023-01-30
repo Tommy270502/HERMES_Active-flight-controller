@@ -3840,7 +3840,7 @@
   (symbol (lib_id "Device:R_Small") (at 25.4 121.92 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4d52a372-9420-451c-af50-8f5f380e48e0)
-    (property "Reference" "R?" (id 0) (at 29.0846 122.0355 90))
+    (property "Reference" "R7" (id 0) (at 29.0846 122.0355 90))
     (property "Value" "5.1k" (id 1) (at 27.2155 121.985 90))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 25.4 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3855,7 +3855,7 @@
   (symbol (lib_id "power:GND") (at 115.57 153.67 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5c514e44-33e2-4c4b-ae7f-50636654683c)
-    (property "Reference" "#PWR?" (id 0) (at 115.57 160.02 0)
+    (property "Reference" "#PWR0104" (id 0) (at 115.57 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 115.57 157.48 0))
@@ -4084,7 +4084,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 105.41 151.13 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a6da1c49-f5f8-4bd8-8a1f-6e9f0765716a)
-    (property "Reference" "J?" (id 0) (at 103.0071 151.1301 0)
+    (property "Reference" "J5" (id 0) (at 103.0071 151.1301 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Batt1" (id 1) (at 103.0071 148.5901 0)
@@ -4135,7 +4135,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 105.41 138.43 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid aec76fa7-ca3b-4002-827b-890c008964e6)
-    (property "Reference" "J?" (id 0) (at 102.87 138.4301 0)
+    (property "Reference" "J4" (id 0) (at 102.87 138.4301 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Batt2" (id 1) (at 102.87 135.8901 0)
@@ -4200,7 +4200,7 @@
   (symbol (lib_id "Device:L_Small") (at 30.48 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b70e6905-3e7f-42b5-b603-6801221c199d)
-    (property "Reference" "L?" (id 0) (at 31.75 109.2199 0)
+    (property "Reference" "L1" (id 0) (at 31.75 109.2199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "L_Small" (id 1) (at 31.75 111.7599 0)
@@ -4219,7 +4219,7 @@
   (symbol (lib_id "Device:C_Small") (at 35.56 121.92 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b7ae69ff-1864-495f-8d8f-fcbb2d70fbdb)
-    (property "Reference" "C?" (id 0) (at 38.1 120.6562 0)
+    (property "Reference" "C9" (id 0) (at 38.1 120.6562 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (id 1) (at 38.1 123.1962 0)
@@ -4491,8 +4491,21 @@
     (pin "2" (uuid 51ecc29b-27d7-427e-83f0-c04a0026c66d))
   )
 
+  (sheet (at 237.49 134.62) (size 7.62 6.35) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid cf1c0b30-e009-423a-8a61-24e0288be5ef)
+    (property "Sheet name" "MCU" (id 0) (at 237.49 133.9084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "MCU.kicad_sch" (id 1) (at 237.49 141.5546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
+    (path "/cf1c0b30-e009-423a-8a61-24e0288be5ef" (page "2"))
   )
 
   (symbol_instances
@@ -4504,6 +4517,9 @@
     )
     (path "/e01df927-8383-464d-a0c4-c0126c0dc919"
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/5c514e44-33e2-4c4b-ae7f-50636654683c"
+      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
     )
     (path "/124c0897-d684-4385-816d-75ab5df8cfd8"
       (reference "#PWR0105") (unit 1) (value "+3.3V") (footprint "")
@@ -4559,9 +4575,6 @@
     (path "/7216c28d-a9a1-4ead-877a-1771616d6ea3"
       (reference "#PWR0122") (unit 1) (value "GND") (footprint "")
     )
-    (path "/5c514e44-33e2-4c4b-ae7f-50636654683c"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/5d908da2-6c54-41bb-9c7b-ab3775858c1d"
       (reference "C1") (unit 1) (value "100u") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
@@ -4587,7 +4600,7 @@
       (reference "C8") (unit 1) (value "100u") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/b7ae69ff-1864-495f-8d8f-fcbb2d70fbdb"
-      (reference "C?") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+      (reference "C9") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/f7d44a9f-c08a-4bcb-8cd3-fc8f62a6b9a1"
       (reference "D1") (unit 1) (value "CHRG") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
@@ -4607,14 +4620,14 @@
     (path "/fa5a923f-23c4-47c4-bacb-24bf6763083d"
       (reference "J3") (unit 1) (value "Batt2") (footprint "")
     )
-    (path "/a6da1c49-f5f8-4bd8-8a1f-6e9f0765716a"
-      (reference "J?") (unit 1) (value "Batt1") (footprint "")
-    )
     (path "/aec76fa7-ca3b-4002-827b-890c008964e6"
-      (reference "J?") (unit 1) (value "Batt2") (footprint "")
+      (reference "J4") (unit 1) (value "Batt2") (footprint "")
+    )
+    (path "/a6da1c49-f5f8-4bd8-8a1f-6e9f0765716a"
+      (reference "J5") (unit 1) (value "Batt1") (footprint "")
     )
     (path "/b70e6905-3e7f-42b5-b603-6801221c199d"
-      (reference "L?") (unit 1) (value "L_Small") (footprint "")
+      (reference "L1") (unit 1) (value "L_Small") (footprint "")
     )
     (path "/d35736f0-de68-454d-9fb0-1a81541e123d"
       (reference "Q1") (unit 1) (value "DMP3013SFV") (footprint "Package_SON:Diodes_PowerDI3333-8")
@@ -4638,7 +4651,7 @@
       (reference "R6") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/4d52a372-9420-451c-af50-8f5f380e48e0"
-      (reference "R?") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+      (reference "R7") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/4b2d920c-152a-4ef8-af7a-b811aec6cc05"
       (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "")
@@ -4651,6 +4664,9 @@
     )
     (path "/7087eb60-8768-46f6-a30a-c818144536a3"
       (reference "U3") (unit 1) (value "BQ25887RGER") (footprint "SnapEDA Library:IC_BQ25887RGER")
+    )
+    (path "/cf1c0b30-e009-423a-8a61-24e0288be5ef/e8e1f712-0deb-4f67-83d0-c85b4f0b9245"
+      (reference "U4") (unit 1) (value "RP2040") (footprint "IC57_RP2040")
     )
   )
 )
